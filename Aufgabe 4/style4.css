@@ -1,0 +1,27 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+div {
+    width: 50%;
+    height: 50%;
+    float: left
+}
+div:active {
+    background: #aaaaaa;
+}
+
+#sound1 {
+    background: rgb(189, 93, 93);
+}
+#sound2 {
+    background: rgb(127, 189, 112);
+}
+#sound3 {
+    background: rgb(93, 183, 189);
+}
+#sound4 {
+    background: rgb(248, 246, 132);
+}
