@@ -9,8 +9,7 @@ div {
     height: 50%;
     float: left
 }
-div:active {
-    background: #aaaaaa;
+.drumpad:active {
 }
 
 #sound1 {
@@ -24,4 +23,17 @@ div:active {
 }
 #sound4 {
     background: rgb(248, 246, 132);
+}
+
+#sound1:active {
+    background: rgb(206, 146, 146);
+}
+#sound2:active {
+    background: rgb(185, 228, 174);
+}
+#sound3:active {
+    background: rgb(176, 235, 240);
+}
+#sound4:active {
+    background: rgb(255, 254, 181);
 }
