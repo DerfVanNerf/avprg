@@ -5,22 +5,25 @@ var context = new AudioContext,
 const MAXFREQUENCY = 2000;
 const MINFREQUENCY = 20;
 
-document.body.addEventListener("mousedown", function (e) {
+document.body.addEventListener("mousedown", function (e) {startOscillator(e)});
+document.body.addEventListener("mouseup", stopOscillator);
+document.body.addEventListener("mousemove", function(e) {adjustAtMove(e);});
+
+function startOscillator(e) {
     mouseDown = true;
     oscillator = context.createOscillator();
     oscillator.connect(gainNode);
     gainNode.connect(context.destination);
     calcFreqAndGain(e.clientX, e.clientY);
     oscillator.start(context.currentTime);
-});
-document.body.addEventListener("mouseup", stopOscillator);
-document.body.addEventListener("mousemove", function (e) {
+}   
+function adjustAtMove(e) {
     if (mouseDown) {
         calcFreqAndGain(e.clientX, e.clientY);
         gainNode.value = e.clientY / window.innerHeight;
-    oscillatorNode.frequency.value = (MAXFREQUENCY - MINFREQUENCY) * e.clientX / window.innerWidth + MINFREQUENCY;
+        oscillator.frequency.value = (MAXFREQUENCY - MINFREQUENCY) * e.clientX / window.innerWidth + MINFREQUENCY;
     }
-});
+}
 
 function stopOscillator() {
     mousedown = false;
