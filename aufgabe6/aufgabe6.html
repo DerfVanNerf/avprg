@@ -4,19 +4,22 @@
         <title>Audio Player</title>
     </head>
     <body>
-        <button>Play</button>
+        <button id = "playButton">Play</button>
         <div text-align = "center" id = "parameters">
             <div id = "gain">
                 Gain
-                <input type = "range">
+                <input type = "range" min="0" max="100" value="10" class="slider">
+                <span id="gainOut">1.0 dB</span>
             </div>   
             <div id = "pan">
                 Pan
-                    <input type = "range">
+                    <input type = "range" min="0" max="100" value="10" class="slider">
+                    <span id="panOut">0 LR</span>
             </div>
             <div id = "delay">
                 Delay
-                    <input type = "range">
+                    <input type = "range" min="0" max="100" value="10" class="slider">
+                    <span id="delayOut">0 sec</span>
             </div>      
         </div>
         <script src = "audioPlayer.js"></script>
