@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Compressor</title>
+    </head>
+    <body>
+        <button id = "playButton">Play</button>
+        <div text-align = "center" id = "parameters">
+            <div id = "threshold">
+                Threshold
+                <input id = "thresholdSlider" type = "range" min="0" max="100" value="10" class="slider">
+                <span id="thresholdOut">1.0</span>
+            </div>
+            <div id = "ratio">
+                Ratio
+                    <input id = "ratioSlider" type = "range" min="0" max="100" value="10" class="slider">
+                    <span id="ratioOut">1:1</span>
+            </div>
+            <div id = "knee">
+                Knee
+                    <input id = "kneeSlider" type = "range" min="0" max="100" value="10" class="slider">
+                    <span id="kneeOut">0</span>
+            </div>      
+            <div id = "attack">
+                    Attack
+                        <input id = "attackSlider" type = "range" min="0" max="100" value="10" class="slider">
+                        <span id="attackOut">0ms</span>
+            </div>
+            <div id = "release">
+                    Release
+                        <input id = "releaseSlider" type = "range" min="0" max="100" value="10" class="slider">
+                        <span id="releaseOut">0ms</span>
+            </div>            
+        </div>
+        <script src = "compressor.js"></script>
+    </body>
+</html>
